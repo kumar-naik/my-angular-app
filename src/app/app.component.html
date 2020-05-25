@@ -1,0 +1,40 @@
+<!-- nav *ngIf="currentUser"-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3" *ngIf="show">
+  <div class="container-fluid">
+      <a href="#" class="navbar-brand mr-3">Project Logo</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+              <a routerLink="/home" routerLinkActive="active" class="nav-item nav-link active">Home</a>
+              <a href="#" class="nav-item nav-link">Services</a>
+              <a href="#" class="nav-item nav-link">About</a>
+              <a href="#" class="nav-item nav-link">Contact</a>
+          </div>
+          <div class="navbar-nav ml-auto">
+              <a routerLink="/add-user" class="nav-item nav-link">Register</a>
+              <a (click)="logout()" class="nav-item nav-link">Logout</a>
+          </div>
+      </div>
+  </div>    
+</nav>
+
+<!--
+  <a class="nav-item nav-link" routerLink="/home">Home</a>
+      
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>      
+      <a routerLink="/add-user" class="btn btn-link">Register</a>
+-->
+
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">             
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+  </div>
+</div>
+
